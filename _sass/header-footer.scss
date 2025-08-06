@@ -1,9 +1,7 @@
 /* Header styles with ASCII art */
 .site-header {
-    border-top: 5px solid var(--primary-color);
+    border-top: none;
     border-bottom: none;
-    padding: 15px 0;
-    position: relative;
 }
 
 .site-title {
@@ -18,16 +16,6 @@
 
 .site-nav .page-link {
     color: var(--text-color);
-}
-
-// Moves menu items to the left
-.trigger {
-    padding-right: 30px;
-}
-
-/* Main content styles */
-.page-content {
-    padding: 30px 0;
 }
 
 /* Footer with ASCII art */
