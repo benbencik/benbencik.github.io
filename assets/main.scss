@@ -12,7 +12,7 @@
    GENERAL STYLES & TYPOGRAPHY
    ==================================== */
 body {
-    font-family: "Arial, Courier New", Courier, monospace;
+    font-family: "Google Sans Code, Courier New", monospace;
     line-height: 1.7;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -20,13 +20,14 @@ body {
 
 /* Main content wrapper */
 .page-content {
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .wrapper {
     background-color: var(--content-bg-color);
     padding: 1.5rem;
     border-radius: 0.5rem;
+    margin-top: 1rem;
     // box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
 }
 
@@ -215,12 +216,6 @@ body {
     position: relative;
 }
 
-.button:hover {
-    background-color: var(--button-hover-bg);
-    color: var(--content-bg-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-}
 
 /* Default arrow style */
 .button::before {
