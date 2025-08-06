@@ -248,7 +248,7 @@ table tr:hover {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -262,7 +262,6 @@ table tr:hover {
 }
 
 .card-meta {
-    font-family: monospace;
     color: var(--secondary-text-color);
     font-size: 0.9rem;
     font-style: italic;
@@ -280,7 +279,6 @@ table tr:hover {
     display: inline-block;
     margin-top: 0.5rem;
     color: var(--primary-color);
-    font-family: monospace;
     text-decoration: none;
 }
 
@@ -303,49 +301,30 @@ table tr:hover {
     font-size: 0.8rem;
 }
 
-// /* ====================================
-// MOBILE NAVIGATION MENU THEMING
-// ==================================== */
-// @media screen and (max-width: 600px) {
-//     .site-nav {
-//         background-color: var(--content-bg-color);
-//         border: 1px solid var(--border-color);
-//         top: 3rem;
-//         right: 1rem;
-//         z-index: 200;
-//     }
+/* ====================================
+MOBILE NAVIGATION MENU THEMING
+==================================== */
+@media screen and (max-width: 600px) {
+    .site-nav {
+        background-color: var(--bg-color-alt);
+        border: 1px solid var(--border-color);
+        top: 3rem;
+        right: 1rem;
+        z-index: 200;
+        padding: auto;
+    }
 
-//     .site-nav .menu-icon>svg {
-//         fill: var(--text-color);
-//     }
+    .site-nav .menu-icon>svg {
+        fill: var(--text-color);
+    }
 
-//     .site-nav .page-link {
-//         color: var(--text-color);
-//     }
+    .site-nav .page-link {
+        color: var(--text-color);
+    }
 
-//     .site-nav input~.trigger {
-//         background-color: var(--content-bg-color);
-//     }
+    .site-nav input~.trigger {
+        background-color: var(--bg-color-alt);
+        padding: 1rem 1rem;
+    }
+}
 
-//     .site-nav label[for="nav-trigger"] {
-//         border: 1px solid var(--border-color);
-//         border-radius: 5px;
-//         background-color: var(--content-bg-color);
-//     }
-// }
-
-// /* Ensure theme toggler remains visible on mobile */
-// @media screen and (max-width: 600px) {
-//     .theme-toggle {
-//         position: relative;
-//         top: 3.25rem;
-//         right: 4rem;
-//         z-index: 200;
-//     }
-// }
-
-// @media screen and (max-width: 600px) {
-//     body, .content-wrapper {
-//         background-color: var(--content-bg-color); /* Set to your preferred color */
-//     }
-// }
