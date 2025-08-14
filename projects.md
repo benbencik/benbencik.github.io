@@ -6,20 +6,82 @@ order: 3
 ---
 
 <style>
-.card:hover .card-header h3 {
-    text-decoration: underline;
-}
+    .card:hover .card-header h3 {
+        text-decoration: underline;
+    }
+
+    /* Open source contributions */
+    .contribution-card {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        background-color: var(--content-bg-color);
+    }
+
+    .repo-link {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .contribution-list {
+        margin-top: 1rem;
+    }
+
+    .contribution-item {
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        border-left: 2px solid var(--border-color);
+    }
+
+    .contribution-title {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    .contribution-title a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    /* Misc projects grid */
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .mini-project {
+        padding: 1.5rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        background-color: var(--content-bg-color);
+        transition: transform 0.2s ease;
+    }
+
+    .mini-project:hover {
+        transform: translateY(-5px);
+    }
+
+    .mini-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: var(--primary-color);
+        text-decoration: none;
+        font-family: monospace;
+    }
 </style>
 
 <script>
-function toggleDescription(id) {
-    var element = document.getElementById(id);
-    if (element.style.display === "none") {
-        element.style.display = "block";
-    } else {
-        element.style.display = "none";
+    function toggleDescription(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
     }
-}
 </script>
 
 <div class="projects-section">
@@ -113,7 +175,11 @@ function toggleDescription(id) {
         </p>
         <div id="mobiusDesc" style="display: none;">
             <p>
-                This Rust project efficiently computes the Möbius function for multipermutations. We model multipermutations within a poset to capture their ordering and interval structure, which are crucial for the recursive algorithm with memoization we employ. The recursive nature of the Möbius function makes it computationally challenging, so our focus is on achieving high efficiency. The Möbius function offers insights into permutation patterns which is a research interest of advisor Vít Jelínek.
+                This Rust project efficiently computes the Möbius function for multipermutations. We model
+                multipermutations within a poset to capture their ordering and interval structure, which are crucial for
+                the recursive algorithm with memoization we employ. The recursive nature of the Möbius function makes it
+                computationally challenging, so our focus is on achieving high efficiency. The Möbius function offers
+                insights into permutation patterns which is a research interest of advisor Vít Jelínek.
             </p>
             <div class="card-links">
                 <a href="https://github.com/benbencik/mobius_function" class="button">GitHub</a>
@@ -146,27 +212,3 @@ function toggleDescription(id) {
         </div>
     </div>
 </div>
-
-<!-- <div class="projects-section">
-  <h2>Open Source Contributions</h2>
-  <div class="card">
-    <h3><a href="https://github.com/organization/ark-works" class="repo-link">Ark-works</a></h3>
-    <div class="contribution-list">
-      <div class="contribution-item">
-        <div class="contribution-title"><a href="#">Issue #123: Feature Implementation</a></div>
-        <p>Added support for XYZ feature by implementing ABC algorithm, which improved performance by 25%.</p>
-      </div>
-      
-      <div class="contribution-item">
-        <div class="contribution-title"><a href="#">Issue #456: Bug Fix</a></div>
-        <p>Fixed critical authentication vulnerability by properly validating user input.</p>
-      </div>
-      
-      <div class="contribution-item">
-        <div class="contribution-title"><a href="#">Issue #789: Documentation</a></div>
-        <p>Improved API documentation with examples and clearer explanations.</p>
-      </div>
-    </div>
-  </div>
-  
-</div> -->
