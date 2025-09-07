@@ -32,8 +32,9 @@ order: 1
     width: 65px;
     height: 65px;
     object-fit: contain;
-    padding: 8px;
-    // border-radius: 8px;
+    /* padding: 8px; */
+    border-radius: 8px;
+    border: 3px solid var(--border-color);
     // filter: grayscale(100%) brightness(0.9) sepia(0.2) invert(0.8);
     // box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     // transition: all 0.3s ease;
