@@ -36,7 +36,6 @@ $dark-border: #4d575f;
 $dark-primary: #a7c080;
 $dark-primary-alt: #e69875;
 
-
 :root {
   --bg-color: #{$light-bg};
   --bg-color-alt: #{$light-bg-alt};
@@ -46,10 +45,7 @@ $dark-primary-alt: #e69875;
   --border-color: #{$light-border};
   --primary-color: #{$light-primary};
   --primary-color-alt: #{$light-primary-alt};
-
-  /* Code colors */
-  --code-bg-color: #f5f7fa;
-  --code-text-color: #476582;
+  --code-bg-color: #{$light-bg-alt};
 
   /* Table colors - updated for better contrast */
   --table-header-bg: var(--table-alt-row-bg); /* Darker blue header */
@@ -82,10 +78,7 @@ $dark-primary-alt: #e69875;
   --border-color: #{$dark-border};
   --primary-color: #{$dark-primary};
   --primary-color-alt: #{$dark-primary-alt};
-
-  /* Code colors - dark theme */
-  --code-bg-color: #282c34;
-  --code-text-color: #abb2bf;
+  --code-bg-color: #{$dark-bg-alt};
 
   /* Table colors - dark theme */
   --table-header-bg: var(--table-alt-row-bg); /* Darker blue header for dark theme */

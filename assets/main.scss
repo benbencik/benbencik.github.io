@@ -1,14 +1,10 @@
---- 
 ---
-
-@import "colors";
-@import "profile";
-@import "blog_page";
+---
+ 
 @import "minima";
+@import "colors";
 @import "callouts";
 @import "header-footer";
-@import "projects";
-@import "cv";
 
 /* ====================================
    GENERAL STYLES & TYPOGRAPHY
@@ -39,7 +35,8 @@ a {
 }
 
 a:visited {
-    color: var(--primary-color); /* Same as unvisited */
+    color: var(--primary-color);
+    /* Same as unvisited */
 }
 
 a:hover {
@@ -50,39 +47,38 @@ a:hover {
 
 ::selection {
     background-color: var(--primary-color-alt);
-    
+
 }
 
 h1 {
-    font-size: 2.5rem;
-    text-decoration: underline italic;
+    font-size: 2.5rem !important;
+    text-decoration: underline italic !important;
 }
 
 h2 {
-    font-size: 2.5rem; /* Or an even smaller value */
+    font-size: 0.5rem;
 }
 
 h3 {
-    font-size: 2rem; /* A smaller size for h2 */
+    font-size: 2rem;
 }
 
 h4 {
-    font-size: 1.5rem; /* A smaller size for h3 */
+    font-size: 1.5rem;
 }
-        
+
 /* ====================================
    INTERACTIVE ELEMENTS
 ==================================== */
 .button {
     display: inline-block;
     padding: 0.4rem 0.8rem;
+    margin: 0.2rem;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
-    text-decoration: none;
     border-radius: 0.3rem;
     font-family: monospace;
-    font-size: 0.9rem;
-    /* Adjust font size */
+    font-size: 0.75rem;
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
@@ -97,22 +93,22 @@ h4 {
 
 /* Theme toggle button */
 .theme-toggle {
-  background: none;
-  font-family: inherit;
-  font-size: inherit;
-  font-style: italic;
-  color: inherit;
-  cursor: pointer;
-  font-size: 1rem;
-  position: relative;
-  border: 1px solid currentColor;
-  border-radius: 10px;
-  padding: 2px 8px;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: italic;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    padding: 2px 8px;
 }
 
 .theme-toggle:hover {
-  color: var(--primary-color);
-  border-color: var(--primary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 /* Theme icon styling */
@@ -173,6 +169,7 @@ h4 {
 ==================================== */
 code {
     background-color: var(--code-bg-color);
+    border: var(--code-bg-color);
     color: var(--code-text-color);
     padding: 0.2rem 0.4rem;
     border-radius: 0.3rem;
@@ -345,4 +342,3 @@ MOBILE NAVIGATION MENU THEMING
         padding: 1rem 1rem;
     }
 }
-
