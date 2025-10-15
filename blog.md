@@ -57,6 +57,8 @@ order: 2
 </style>
 Comming soon!
 
+You can read my 11 part [blog series on PlonK](https://www.maya-zk.com/blog/plonk-overview) written at MayaZK
+
 <!-- 
 <div class="home">
   {% if site.posts.size > 0 %}

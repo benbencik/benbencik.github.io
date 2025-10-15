@@ -24,8 +24,12 @@ order: 1
 }
 
 .cv-subheading {
-    font-size: 0.9rem;
-    /* color: var(--); */
+    font-size: 1rem;
+}
+
+.cv-description {
+    margin-top: 0rem !important;
+    font-size: 0.88rem;
 }
 
 .cv-img {
@@ -58,7 +62,9 @@ order: 1
         </div>
         <img src="../assets/images/charles-uni.jpg" class="cv-img" alt="Charles University">
     </div>
-    Degree focused on math foundations in complexity theory, cryptography, graph theory and algorithms.
+    <div class="cv-description">
+        Degree focused on math foundations in complexity theory, cryptography, graph theory and algorithms.
+    </div>
 </div>
 
 <div class="cv-entry">
@@ -72,7 +78,9 @@ order: 1
         </div>
         <img src="../assets/images/tum-uni.png" class="cv-img" alt="TUM">
     </div>
-    Selected courses in high-performance computing, cryptography, and blockchain engineering.
+    <div class="cv-description">
+        Selected courses in high-performance computing, cryptography, and blockchain engineering.
+    </div>
 </div>
 
 <div class="cv-entry">
@@ -86,8 +94,10 @@ order: 1
         </div>
         <img src="../assets/images/charles-uni.jpg" class="cv-img" alt="Charles University">
     </div>
-    Thesis: <a href="https://dspace.cuni.cz/bitstream/handle/20.500.11956/192912/130401356.pdf?sequence=1&isAllowed=y">On \(\mathcal{P}\mathfrak{lon}\mathcal{K}\)  SNARK</a> analyzed the IOP in detail and described associated cryptographic primitives. Moreover the thesis suggests optimization for arithmetization phase implemented on fork of ZK-Garage.
-    <p>Advisor: Pavel Hubáček</p>
+    <div class="cv-description">
+        Thesis: <a href="https://dspace.cuni.cz/bitstream/handle/20.500.11956/192912/130401356.pdf?sequence=1&isAllowed=y">On \(\mathcal{P}\mathfrak{lon}\mathcal{K}\)  SNARK</a> analyzed the IOP in detail and described associated cryptographic primitives. Moreover the thesis suggests optimization for arithmetization phase implemented on fork of ZK-Garage.
+        <p>Advisor: Pavel Hubáček</p>
+    </div>
 </div>
 
 <div style="text-align: center; margin: 15px 0;">• • •</div>
@@ -105,7 +115,9 @@ order: 1
         </div>
         <img src="../assets/images/tbc2.png" class="cv-img" alt="TUM Blockchain Club">
     </div>
-    Lead of the research track for the 2025 conference, responsible for inviting leading cryptographers and organizing the Ethereum Research Challenge hackathon.
+    <div class="cv-description">
+        Lead of the research track for the 2025 conference, responsible for inviting leading cryptographers and organizing the Ethereum Research Challenge hackathon.
+    </div>
 </div>
 
 <div class="cv-entry">
@@ -119,7 +131,9 @@ order: 1
         </div>
         <img src="../assets/images/tedx.png" class="cv-img" alt="TEDxYouth@Bratislava">
     </div>
-    Head of the speakers team at TEDxYouth@Bratislava 2020.
+    <div class="cv-description">
+        Head of the speakers team at TEDxYouth@Bratislava 2020.
+    </div>
 </div>
 
 <div style="text-align: center; margin: 15px 0;">• • •</div>
@@ -137,14 +151,15 @@ order: 1
         </div>
         <img src="../assets/images/stablelab.jpg" class="cv-img" alt="Stablelab">
     </div>
-    In this internship, we worked on a prototype of a personalized AI DAO delegate.
-    I worked on smart contracts that allow delegation and voting across multiple DAOs in on-chain and off-chain settings.
+    <div class="cv-description">
+        In this internship, we worked on a prototype of a personalized AI DAO delegate. I worked on smart contracts that allow delegation and voting across multiple DAOs in on-chain and off-chain settings.
+    </div>
 </div>
 
 <div class="cv-entry">
     <div class="cv-heading">
         <div class="cv-heading-text">
-            <strong>Research intern</strong><br>
+            <strong>Research Intern</strong><br>
             <span class="cv-subheading">
                 <a href="http://dimacs.rutgers.edu/"> Dimacs</a> • [05/2025 - 09/2025] <br>
                 New Brunswick, New Yersey 🇺🇸
@@ -152,6 +167,12 @@ order: 1
         </div>
         <img src="../assets/images/dimacs.png" class="cv-img" alt="dimacs">
     </div>
+    <div class="cv-description">
+        Research in discrete mathematics under DIMACS on memory-query tradeoffs for property testing on graphs. Advisor: Sumegha Garg
+    </div>
+</div>
+
+
 </div>
 
 <div class="cv-entry">
@@ -165,8 +186,9 @@ order: 1
         </div>
         <img src="../assets/images/maya-zk.jpg" class="cv-img" alt="MAYA-ZK">
     </div>
-    At MAYA-ZK, I worked on the development of zero-knowledge protocols. My primary focus was on the software side,
-    optimizing and fine-tuning Rust implementation of PLONK zkSNARK.
+    <div class="cv-description">
+        At MAYA-ZK, I worked on the development of zero-knowledge protocols. My primary focus was on the software side, optimizing and fine-tuning Rust implementation of PLONK zkSNARK.
+    </div>
 </div>
 
 <div class="cv-entry">
@@ -180,8 +202,9 @@ order: 1
         </div>
         <img src="../assets/images/comap.png" class="cv-img" alt="ComAp">
     </div>
-    Offered the internship after securing 2nd place at a <a href="https://unit.bestprague.cz/"> UnIT Hackathon</a>.
-    Developed and maintained a Python-based testing environment for control solutions in smart power generation.
+    <div class="cv-description">
+        Offered the internship after securing 2nd place at a <a href="https://unit.bestprague.cz/"> UnIT Hackathon</a>. Developed and maintained a Python-based testing environment for control solutions in smart power generation.
+    </div>
 </div>
 
 <div class="cv-entry">
@@ -195,8 +218,9 @@ order: 1
         </div>
         <img src="../assets/images/aeromobil.png" class="cv-img" alt="AeroMobil">
     </div>
-    I contributed to the development and prototyping of the flying car. As a programmer, I worked on applications
-    calculating physics simulations for stress analysis of mechanical components.
+    <div class="cv-description">
+        I contributed to the development and prototyping of the flying car. As a programmer, I worked on applications calculating physics simulations for stress analysis of mechanical components.
+    </div>
 </div>
 
 <div style="text-align: center; margin: 15px 0;">• • •</div>
