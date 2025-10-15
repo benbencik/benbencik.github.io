@@ -50,7 +50,7 @@ order: 1
 <div class="cv-entry">
     <div class="cv-heading">
         <div class="cv-heading-text">
-            <strong>Master in Theoretical Computer Science</strong><br>
+            <strong>M.Sc. in Theoretical Computer Science</strong><br>
             <span class="cv-subheading">
                 <a href="https://www.mff.cuni.cz/en">Charles University</a> • [09/2024 - Present] <br>
                 Prague, Czech Republic 🇨🇿
@@ -58,12 +58,13 @@ order: 1
         </div>
         <img src="../assets/images/charles-uni.jpg" class="cv-img" alt="Charles University">
     </div>
+    Degree focused on math foundations in complexity theory, cryptography, graph theory and algorithms.
 </div>
 
 <div class="cv-entry">
     <div class="cv-heading">
         <div class="cv-heading-text">
-            <strong>Master in Theoretical Computer Science</strong><br>
+            <strong>Exchange Program in Computer Science (2 semesters)</strong><br>
             <span class="cv-subheading">
                 <a href="https://www.tum.de/">Technical University Munich</a> • [10/2024 - 09/2025]<br>
                 Munich, Germany 🇩🇪 
@@ -71,12 +72,13 @@ order: 1
         </div>
         <img src="../assets/images/tum-uni.png" class="cv-img" alt="TUM">
     </div>
+    Selected courses in high-performance computing, cryptography, and blockchain engineering.
 </div>
 
 <div class="cv-entry">
     <div class="cv-heading">
         <div class="cv-heading-text">
-            <strong>Bachelor of Computer Science</strong><br>
+            <strong>B.Sc. in Computer Science</strong><br>
             <span class="cv-subheading">
                 <a href="https://www.mff.cuni.cz/en">Charles University</a> • [10/2021 - 09/2024] <br>
                 Prague, Czech Republic 🇨🇿 
@@ -84,7 +86,8 @@ order: 1
         </div>
         <img src="../assets/images/charles-uni.jpg" class="cv-img" alt="Charles University">
     </div>
-    Thesis: <a href="/research#reducing-polynomial-degree-in-plonk-zksnark">On PlonK SNARK</a>
+    Thesis: <a href="https://dspace.cuni.cz/bitstream/handle/20.500.11956/192912/130401356.pdf?sequence=1&isAllowed=y">On \(\mathcal{P}\mathfrak{lon}\mathcal{K}\)  SNARK</a> analyzed the IOP in detail and described associated cryptographic primitives. Moreover the thesis suggests optimization for arithmetization phase implemented on fork of ZK-Garage.
+    <p>Advisor: Pavel Hubáček</p>
 </div>
 
 <div style="text-align: center; margin: 15px 0;">• • •</div>
@@ -102,12 +105,13 @@ order: 1
         </div>
         <img src="../assets/images/tbc2.png" class="cv-img" alt="TUM Blockchain Club">
     </div>
+    Lead of the research track for the 2025 conference, responsible for inviting leading cryptographers and organizing the Ethereum Research Challenge hackathon.
 </div>
 
 <div class="cv-entry">
     <div class="cv-heading">
         <div class="cv-heading-text">
-            <strong>Event Organizer</strong><br>
+            <strong>Head of speakers team</strong><br>
             <span class="cv-subheading">    
                 <a href="https://www.ted.com/tedx/events/22149"> TEDxYouth@Bratislava</a> • [07/2019 - 03/2021] <br>
                 Bratislava, Slovakia 🇸🇰
@@ -115,6 +119,7 @@ order: 1
         </div>
         <img src="../assets/images/tedx.png" class="cv-img" alt="TEDxYouth@Bratislava">
     </div>
+    Head of the speakers team at TEDxYouth@Bratislava 2020.
 </div>
 
 <div style="text-align: center; margin: 15px 0;">• • •</div>
@@ -132,9 +137,8 @@ order: 1
         </div>
         <img src="../assets/images/stablelab.jpg" class="cv-img" alt="Stablelab">
     </div>
-    In this internship in a team of 4, we worked on a prototype of a personalized AI DAO delegate.
-    I worked on smart contracts that allow delegation and voting across multiple DAOs in both
-    on-chain and off-chain settings.
+    In this internship, we worked on a prototype of a personalized AI DAO delegate.
+    I worked on smart contracts that allow delegation and voting across multiple DAOs in on-chain and off-chain settings.
 </div>
 
 <div class="cv-entry">
@@ -153,7 +157,7 @@ order: 1
 <div class="cv-entry">
     <div class="cv-heading">
         <div class="heading-text">
-            <strong>ZK Cryptography Intern Engineer</strong><br>
+            <strong>ZK Cryptography Intern</strong><br>
             <span class="cv-subheading">
                 <a href="https://www.maya-zk.com/"> MAYA-ZK</a> • [06/2023 - 05/2024] <br>
                 Prague, Czech Republic 🇨🇿
