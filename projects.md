@@ -80,25 +80,21 @@ order: 3
 ## Hackathons
 
 <div class="projects-section">
-    <div class="card" onclick="toggleDescription('HackerHouseDesc')">
+    <div class="card" onclick="toggleDescription('cryptoCachingDesc2')">
         <div class="card-header">
-            <h3>Verifiable Benchmarks</h3>
-            <div class="card-meta">EighenLayer Hacker House Berlin 2025 🇩🇪 <span class="project-award"></span></div>
+            <h3>Wifi-Radar</h3>
+            <div class="card-meta">ETHGlobal Buenos Aires 2025 🇦🇷<span class="project-award"></span></div>
         </div>
         <p class="card-tags">
-            <span class="tag">Privacy</span>
-            <span class="tag">AI</span>
+            <span class="tag">DePin</span>
             <span class="tag">Blockchain</span>
         </p>
-        <div id="HackerHouseDesc" style="display: none;">
+        <div id="cryptoCachingDesc2" style="display: none;">
             <p>
-                I was glad to participate in the EigenLayer Hacker House during Berlin Blockchain Week 2025. Thanks to EigenLayer for providing us with co-working space and accommodation for the duration of the Blockchain Week. I had the opportunity to build, meet great people, and attend numerous events throughout Berlin.
-            </p>
-            <p>
-                I collaborated on a project with my friend Alexander Semenov from the TUM Blockchain Club. We built upon work we had previously developed at ETHGlobal in Prague. Our earlier project, which computed SNARK proofs of inference, was quite slow in execution. This time, we explored a different approach using the <a href="https://arxiv.org/pdf/2501.16007">TOPLOC</a>, which is implemented as a library. This approach provides weaker guarantees than SNARK proofs but is significantly faster and more practical for real-world applications. We integrated the entire system with the EigenLayer ecosystem, enabling proofs to be published on-chain with verification handled by an AVS (Actively Validated Service).
+                WiFi-Radar is a decentralized, "public good" platform that helps discover true internet speed for open WiFi. The platform enables users to add and contribute WiFi hotspot data through map interface and implements a "Proof of Location" system. When a user adds a WiFi station, the system performs real-time speed tests and verifies that the user is physically present at the claimed coordinates. This prevents location imitation.
             </p>
             <div class="card-links">
-                <a href="https://github.com/benbencik/verifiable-benchmarks" class="button">Github repo</a>
+                <a href="https://ethglobal.com/showcase/wifi-radar-jsqac" class="button">ETH Global Showcase</a>
             </div>
         </div>
     </div>
@@ -126,7 +122,29 @@ order: 3
             </div>
         </div>
     </div>
-    <div class="card" onclick="toggleDescription('cryptoCachingDesc2')">
+    <div class="card" onclick="toggleDescription('HackerHouseDesc')">
+        <div class="card-header">
+            <h3>Verifiable Benchmarks</h3>
+            <div class="card-meta">EighenLayer Hacker House Berlin 2025 🇩🇪 <span class="project-award"></span></div>
+        </div>
+        <p class="card-tags">
+            <span class="tag">Privacy</span>
+            <span class="tag">AI</span>
+            <span class="tag">Blockchain</span>
+        </p>
+        <div id="HackerHouseDesc" style="display: none;">
+            <p>
+                I was glad to participate in the EigenLayer Hacker House during Berlin Blockchain Week 2025. Thanks to EigenLayer for providing us with co-working space and accommodation for the duration of the Blockchain Week. I had the opportunity to build, meet great people, and attend numerous events throughout Berlin.
+            </p>
+            <p>
+                I collaborated on a project with my friend Alexander Semenov from the TUM Blockchain Club. We built upon work we had previously developed at ETHGlobal in Prague. Our earlier project, which computed SNARK proofs of inference, was quite slow in execution. This time, we explored a different approach using the <a href="https://arxiv.org/pdf/2501.16007">TOPLOC</a>, which is implemented as a library. This approach provides weaker guarantees than SNARK proofs but is significantly faster and more practical for real-world applications. We integrated the entire system with the EigenLayer ecosystem, enabling proofs to be published on-chain with verification handled by an AVS (Actively Validated Service).
+            </p>
+            <div class="card-links">
+                <a href="https://github.com/benbencik/verifiable-benchmarks" class="button">Github repo</a>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDescription('cryptoCachingDesc3')">
         <div class="card-header">
             <h3>CryptoCaching</h3>
             <div class="card-meta">EPFL Hackathon 2025 🇨🇭 <span class="project-award"><br>🥉 3rd Place Hedera</span></div>
@@ -136,7 +154,7 @@ order: 3
             <span class="tag">P2P</span>
             <span class="tag">Blockchain</span>
         </p>
-        <div id="cryptoCachingDesc2" style="display: none;">
+        <div id="cryptoCachingDesc3" style="display: none;">
             <p>
                 A blockchain-based alternative to traditional GeoCaching. We solved the admin maintenance problem by creating a P2P network to claim and verify cache discoveries. Each cache contains an NFC tag reprogrammed by users, with a token passing mechanism implemented on Hedera to prevent false claims of unvisited caches.
             </p>
@@ -291,5 +309,4 @@ order: 3
       </div>
     </div>
   </div>
-  
 </div> -->
