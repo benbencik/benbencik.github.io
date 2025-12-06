@@ -13,8 +13,6 @@ Project done as part of the DIMACS [REU program](https://reu.dimacs.rutgers.edu/
 
 **Project description:** Property testing is a natural notion of approximation for decision problems, where given a property (or decision), the task is to distinguish whether a given instance has this property or is "far" from any instance having the property. Such tasks are widely used in various areas of TCS, such as coding theory, hardness of approximation, and graph algorithms. In this project, we will focus on property testing on graphs, and explore the impact of memory constraints on the complexity of property testing. One of the main measures of complexity for a property testing algorithm is its query complexity, which is the maximum number of input elements queried to determine whether the graph satisfies a given property.
     
-*The research is stil ongoing for more details **visit project page**...*
-
 <div class="button-container">
   <a href="http://reu.dimacs.rutgers.edu/~bb921/" class="button">Project Page</a>
   <a href="/assets/presentations/reu_presentation.pdf" class="button">REU Presentation</a>

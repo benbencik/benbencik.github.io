@@ -1,7 +1,7 @@
 ---
 layout: page
-title: talks
-permalink: /talks/
+title: presentations
+permalink: /presentations/
 order: 4
 ---
 
