@@ -173,8 +173,6 @@ order: 1
 </div>
 
 
-</div>
-
 <div class="cv-entry">
     <div class="cv-heading">
         <div class="heading-text">
