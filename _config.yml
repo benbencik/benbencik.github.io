@@ -33,7 +33,7 @@ github_username:  benbencik
 header_pages:
   - cv.md
   - blog.md
-  - talks.md
+  - presentations.md
   - projects.md
   - research.md
 
@@ -41,6 +41,9 @@ header_pages:
 theme: minima
 plugins:
   - jekyll-feed
+
+# Permalink structure for blog posts
+permalink: /blogs/:title.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.
