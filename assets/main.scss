@@ -1,6 +1,7 @@
----
----
- 
+--- 
+
+--- 
+
 @import "minima";
 @import "colors";
 @import "callouts";
@@ -23,11 +24,19 @@ body {
 }
 
 .wrapper {
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--content-bg-color);
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin-top: 1rem;
-    // box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+}
+
+/* Posts use wrapper with no padding */
+.post .wrapper {
+    padding: 0;
 }
 
 a {
@@ -36,7 +45,6 @@ a {
 
 a:visited {
     color: var(--primary-color);
-    /* Same as unvisited */
 }
 
 a:hover {
@@ -76,7 +84,6 @@ h4 {
     margin: 0.2rem;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
-    border-radius: 0.3rem;
     font-family: monospace;
     font-size: 0.75rem;
     transition: all 0.3s ease;
@@ -165,6 +172,54 @@ h4 {
 }
 
 /* ====================================
+   BLOG POST OUTLINE (TABLE OF CONTENTS)
+==================================== */
+
+.post-outline {
+    position: fixed;
+    left: calc(50% + 340px + 2rem); /* Positioned to the right of centered 700px wrapper */
+    top: 2rem;
+    min-width: 250px;
+    max-width: 300px;
+    background: var(--content-bg-color);
+    // padding: 1rem 1rem 1rem 1.5rem;
+    font-size: 0.95rem;
+    height: fit-content;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.post-outline ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.post-outline li {
+    margin-bottom: 0.5rem;
+}
+
+.post-outline a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.post-outline a.active,
+.post-outline a:hover {
+    color: var(--primary-color-alt);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Responsive: hide outline on mobile */
+@media (max-width: 1200px) {
+    .post-outline {
+        display: none;
+    }
+}
+
+
+/* ====================================
    CODE & SYNTAX HIGHLIGHTING
 ==================================== */
 code {
@@ -212,10 +267,14 @@ pre code {
 table {
     border-collapse: collapse;
     width: 100%;
+    max-width: 100%;
     margin: 1.5rem 0;
     border-radius: 0.3rem;
     overflow: hidden;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    font-size: small;
+    display: block;
+    overflow-x: auto;
 }
 
 th {
@@ -231,6 +290,7 @@ td {
     padding: 0.8rem;
     border: 1px solid var(--border-color);
     color: var(--text-color);
+    word-wrap: break-word;
 }
 
 table tr {

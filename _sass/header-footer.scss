@@ -2,6 +2,7 @@
 .site-header {
     border-top: none;
     border-bottom: none;
+    // max-width: 1500px;
 }
 
 .site-title {
@@ -15,20 +16,4 @@
 
 .site-nav .page-link {
     color: var(--text-color);
-}
-
-/* Footer with ASCII art */
-.site-footer {
-    border-top: none;
-    padding: 20px 0;
-    position: relative;
-}
-
-.site-footer::before {
-    content: "✧ ✦ ✧ ";
-    display: block;
-    text-align: center;
-    font-family: monospace;
-    color: var(--border-color);
-    margin-bottom: 20px;
 }
