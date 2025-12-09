@@ -100,7 +100,7 @@ order: 1
     </div>
 </div>
 
-<div style="text-align: center; margin: 15px 0;">• • •</div>
+<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
 
 ### Organizations
 
@@ -136,7 +136,7 @@ order: 1
     </div>
 </div>
 
-<div style="text-align: center; margin: 15px 0;">• • •</div>
+<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
 
 ### Work Experience
 
@@ -221,6 +221,7 @@ order: 1
     </div>
 </div>
 
-<div style="text-align: center; margin: 15px 0;">• • •</div>
+<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
+
 ### [Projects](/projects)
 View my technical projects and hackathon participations at projects page.
