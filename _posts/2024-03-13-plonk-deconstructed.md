@@ -6,9 +6,8 @@ categories: deep-dive zkSNARK algebra
 excerpt: "11-part blog series explaining the internals of the PlonK protocol."
 ---
 
-![img](assets/images/blogs/blokblog.png)
+This blog-series was written in collaboration with Maya-ZK. You can find it on their page:
 
-This post was written in collaboration with Maya-ZK. You can find them on their page:
 1. [Overview](https://www.maya-zk.com/blog/plonk-overview)
 2. [Arithmetization](https://www.maya-zk.com/blog/arithmetization)
 3. [Math Preliminaries](https://www.maya-zk.com/blog/math-toolkit)
