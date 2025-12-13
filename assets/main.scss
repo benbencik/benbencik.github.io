@@ -6,6 +6,7 @@
 @import "colors";
 @import "callouts";
 @import "header-footer";
+@import "post-outline";
 
 /* ====================================
    GENERAL STYLES & TYPOGRAPHY
@@ -24,7 +25,7 @@ body {
 }
 
 .wrapper {
-    max-width: 700px;
+    max-width: 750px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -170,54 +171,6 @@ h4 {
     visibility: visible;
     transform: translateY(0);
 }
-
-/* ====================================
-   BLOG POST OUTLINE (TABLE OF CONTENTS)
-==================================== */
-
-.post-outline {
-    position: fixed;
-    left: calc(50% + 340px + 2rem); /* Positioned to the right of centered 700px wrapper */
-    top: 2rem;
-    min-width: 250px;
-    max-width: 300px;
-    background: var(--content-bg-color);
-    // padding: 1rem 1rem 1rem 1.5rem;
-    font-size: 0.95rem;
-    height: fit-content;
-    max-height: 80vh;
-    overflow-y: auto;
-}
-
-.post-outline ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.post-outline li {
-    margin-bottom: 0.5rem;
-}
-
-.post-outline a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.post-outline a.active,
-.post-outline a:hover {
-    color: var(--primary-color-alt);
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-/* Responsive: hide outline on mobile */
-@media (max-width: 1200px) {
-    .post-outline {
-        display: none;
-    }
-}
-
 
 /* ====================================
    CODE & SYNTAX HIGHLIGHTING

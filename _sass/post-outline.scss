@@ -1,0 +1,60 @@
+/* ====================================
+   BLOG POST OUTLINE (TABLE OF CONTENTS)
+==================================== */
+
+.post-outline {
+    position: fixed;
+    left: calc(50% + 360px + 2rem); /* Positioned to the right of centered 700px wrapper */
+    top: 3rem;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 0.75rem;
+}
+
+.post-outline ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.post-outline li {
+    margin-bottom: 0.3rem;
+}
+
+/* indentation per heading level */
+.post-outline .outline-h1 { padding-left: 0;}
+.post-outline .outline-h2 { padding-left: 0.9rem; }
+.post-outline .outline-h3 { padding-left: 1.8rem; }
+.post-outline .outline-h3 { padding-left: 2.7rem; }
+
+.post-outline .outline-h1 a {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+/* link appearance */
+.post-outline a {
+    color: var(--secondary-text-color);
+    padding: 0.18rem 0.35rem;
+}
+
+
+/* hover & active */
+.post-outline a:hover {
+    color: var(--primary-color);
+    
+}
+
+.post-outline a.active {
+    color: var(--primary-color);
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+/* Responsive: hide outline on mobile */
+@media (max-width: 1500px) {
+    .post-outline {
+        display: none;
+    }
+}
