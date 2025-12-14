@@ -66,7 +66,7 @@ layout: page
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
+    width: 1.8rem;
     height: 2.5rem;
     border-radius: 50%;
     // background-color: var(--code-bg-color);
@@ -119,7 +119,7 @@ layout: page
     <div class="social-links">
       <a href="https://linkedin.com/in/benbencik/" class="social-link" target="_blank" aria-label="LinkedIn">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
           class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M8 11v5" />
@@ -130,7 +130,7 @@ layout: page
       </a>
       <a href="mailto:bencikben@gmail.com" class="social-link" aria-label="Email">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
           class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
@@ -138,16 +138,22 @@ layout: page
       </a>
       <a href="https://github.com/benbencik" class="social-link" aria-label="GitHub">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
           class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path
             d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
           </svg>
       </a>
+      <a href="https://x.com/BencikBenj91172" class="social-link" target="_blank" aria-label="X">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+          <path d="M12.6 0.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867 -5.07 -4.425 5.07H0.316l5.733 -6.57L0 0.75h5.063l3.495 4.633L12.601 0.75Zm-0.86 13.028h1.36L4.323 2.145H2.865z" stroke-width="1"></path>
+        </svg>
+      </a>
       <a href="https://soundcloud.com/kalnavoda" class="social-link" aria-label="SoundCloud">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
           class="icon icon-tabler icons-tabler-outline icon-tabler-brand-soundcloud">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M17 11h1c1.38 0 3 1.274 3 3c0 1.657 -1.5 3 -3 3l-6 0v-10c3 0 4.5 1.5 5 4z" />
@@ -161,14 +167,13 @@ layout: page
   <div class="profile-content">
     <!-- <h3>About Me</h3> -->
     <p>
-      I am doing a <b>master's degree in Theoretical Computer Science</b> at Charles University in Prague and am
-      currently a visiting student at TU Munich. My bachelor's thesis focused on <b>zero-knowledge proofs</b>, and I
-      continue to explore this area.
+      Pursuing a master's degree in <b>Theoretical Computer Science</b> at <i>Charles University</i> in Prague, focused on cryptography. Enthusiastic about building trustless, privacy-preserving systems. Balancing in between math and engineering. Rust enjoyer.
     </p>
     <p class="card-tags">
-      <span class="tag">Cryptograhy</span>
-      <span class="tag">Complexity</span>
-      <span class="tag">Combinatorics</span>
+      <span class="tag">cryptograhy</span>
+      <span class="tag">graph theory</span>
+      <span class="tag">complexity</span>
+      <span class="tag">web3</span> 
     </p>
   </div>
 </div>
