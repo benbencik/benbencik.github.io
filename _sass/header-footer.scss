@@ -2,7 +2,6 @@
 .site-header {
     border-top: none;
     border-bottom: none;
-    // max-width: 1500px;
 }
 
 .site-title {
@@ -16,4 +15,6 @@
 
 .site-nav .page-link {
     color: var(--text-color);
+    padding: 0 0rem;
+    margin-right: 15px !important;
 }
