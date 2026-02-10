@@ -143,6 +143,22 @@ order: 1
 <div class="cv-entry">
     <div class="cv-heading">
         <div class="cv-heading-text">
+            <strong>Research Fellow</strong><br>
+            <span class="cv-subheading">
+                <a href="https://ethz.ch/en.html">ETH Zürich</a> • [07/2026 - 08/2026] <br>
+                Switzerland, Zürich 🇨🇭
+            </span>
+        </div>
+        <img src="../assets/images/stablelab.jpg" class="cv-img" alt="Stablelab">
+    </div>
+    <div class="cv-description">
+        I will be working on a CS research project in programme <a href="https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/ssr-fellowship.html">ETH Student Summer Research Fellowship</a>. Selected as one of 20 SSRF students among over 2000 applicants.
+    </div>
+</div>
+
+<div class="cv-entry">
+    <div class="cv-heading">
+        <div class="cv-heading-text">
             <strong>BlockSprint: AI-Driven DAO Governance</strong><br>
             <span class="cv-subheading">
                 <a href="https://stablelab.xyz/">Stablelab</a> • [05/2025 - 09/2025] <br>
