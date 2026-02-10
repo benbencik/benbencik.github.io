@@ -149,7 +149,7 @@ order: 1
                 Switzerland, Zürich 🇨🇭
             </span>
         </div>
-        <img src="../assets/images/stablelab.jpg" class="cv-img" alt="Stablelab">
+        <img src="../assets/images/eth.svg" class="cv-img" alt="Stablelab">
     </div>
     <div class="cv-description">
         I will be working on a CS research project in programme <a href="https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/ssr-fellowship.html">ETH Student Summer Research Fellowship</a>. Selected as one of 20 SSRF students among over 2000 applicants.
@@ -177,7 +177,7 @@ order: 1
         <div class="cv-heading-text">
             <strong>Research Intern</strong><br>
             <span class="cv-subheading">
-                <a href="http://dimacs.rutgers.edu/"> Dimacs</a> • [05/2025 - 09/2025] <br>
+                <a href="http://dimacs.rutgers.edu/"> DIMACS Rutgers University</a> • [05/2025 - 09/2025] <br>
                 New Brunswick, New Yersey 🇺🇸
             </span>
         </div>
