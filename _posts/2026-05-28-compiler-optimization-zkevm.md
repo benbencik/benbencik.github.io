@@ -81,4 +81,4 @@ One could write a custom LLVM passes with [llvm-plugin](https://crates.io/crates
 
 ---
 
-As the outcome, it is possible to get at least 10% improvement on the top of `opt-level=3` which is very reasonable for no-code change. But as the paper highlighted the best approach is to use the optimizer to get the best results.
+As the outcome, it is possible to get at least 10% improvement on the top of `opt-level=3` which is very reasonable for no-code change. But as the paper highlighted, the best approach is to use an optimizer to find the most suitable parameters for the specific zkVM.
