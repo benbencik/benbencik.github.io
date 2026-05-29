@@ -2,19 +2,19 @@
 layout: post
 title:  "Tuning compiler flags for zkVMs"
 date:   2026-05-28
-categories: zkEVM
+categories: zkEVM Ethereum
 excerpt: "How far can we get with no-code change"
 ---
 
-A recent publication [Evaluating Compiler Optimization Impacts on zkVM Performance](https://arxiv.org/pdf/2508.17518), [presented at ZKProof 8](https://www.youtube.com/watch?v=fSMaBewbD0Y&t=1238s), motivated me to test compiler optimizations on the proposed zkEVMs. In this work the compiler is no longer optimizing for the number of instruction on the processor but for the execution trace rows in the AIR table. While the standard optimizations help, we can still tweak the parameters a bit more to push them to better result. As outcome it was possible to **reduce the costs by 10%** for ethrex stateless validator running in the ZisK zkVM.
+A recent publication [Evaluating Compiler Optimization Impacts on zkVM Performance](https://arxiv.org/pdf/2508.17518), [presented at ZKProof 8](https://www.youtube.com/watch?v=fSMaBewbD0Y&t=1238s), motivated me to test compiler optimizations on the proposed zkEVMs. In this work the compiler is no longer optimizing for the number of instructions on the processor but for the execution trace rows in the AIR table. While the standard optimizations help, we can still tweak the parameters a bit more to push them to better result. As outcome it was possible to **reduce the costs by 10%** for ethrex stateless validator running in the ZisK zkVM.
 
 ## Computation model
 
 We are compiling for architecture `riscv64im_zicclsm`, which is a bare-metal target. There is no operating system, no standard library and you need to bring your own memory management. Every operation and branch must eventually be proven in the resulting proof of computation.
 
-This instruction set is deliberately simple. There are no extensions like vectorized instruction, but we do have precompiles for computing hash functions. The `Zicclsm` feature adds support for misaligned loads and stores, more info about why we need it can be found in [zkVM standards](https://github.com/eth-act/zkvm-standards/blob/main/standards/riscv-target/target.md#zicclsm-extension)
+This instruction set is deliberately simple. There are no extensions like vectorized instruction, but we do have precompiles for computing hash functions. The `Zicclsm` feature adds support for misaligned loads and stores, more info about why we need it can be found in [zkVM standards](https://github.com/eth-act/zkvm-standards/blob/main/standards/riscv-target/target.md#zicclsm-extension).
 
-Looking at the [ZisK costs table](https://github.com/0xPolygonHermez/zisk/blob/main/core/src/zisk_ops_costs.rs) this is also different from conventional CPU. Arithmetic multiplication and division have the same cost. The compiler sometimes rewrites operations using bitwise tricks that are fast on real hardware, but this is counterproductive here. Every instruction pays a fixed cost and multiplication replaces by series of bitwise operations is strictly worse.
+Looking at the [ZisK costs table](https://github.com/0xPolygonHermez/zisk/blob/main/core/src/zisk_ops_costs.rs) this is also different from conventional CPU. Arithmetic multiplication and division have the same cost. The compiler sometimes rewrites operations using bitwise tricks that are fast on real hardware, but this is counterproductive here. Every instruction pays a fixed cost and multiplication replaced by series of bitwise operations is strictly worse.
 
 ## Existing findings and constraints
 
@@ -28,7 +28,7 @@ That being said, there are a few passes that expose a specific [disable option](
 
 ## Search for optimal parameters
 
-Okay so, this effectively leaves us with [codegen options](https://doc.rust-lang.org/rustc/codegen-options/index.html) and `llvm-args`. There are way too many knobs that we can tweak. I picked the flags, specified at the [paper reference implementation](https://github.com/thomasgassmann/zkvm-compiler-optimizations/blob/main/zkbench/tune/common.py#L262-L291) and fed that to Optuna optimizer commonly used to find hyperparameters in machine learning. The following parameters provided the best results:
+Okay so, this effectively leaves us with [codegen options](https://doc.rust-lang.org/rustc/codegen-options/index.html) and `llvm-args`. There are way [too many knobs](https://clang.llvm.org/docs/ClangCommandLineReference.html) that we can tweak. I picked the flags, specified at the [paper reference implementation](https://github.com/thomasgassmann/zkvm-compiler-optimizations/blob/main/zkbench/tune/common.py#L262-L291) and fed that to Optuna optimizer commonly used to find hyperparameters in machine learning. The following parameters provided the best results:
 
 ```
 --inline-threshold=4749
@@ -38,7 +38,6 @@ Okay so, this effectively leaves us with [codegen options](https://doc.rust-lang
 --unroll-threshold=378
 --disable-licm-promotion
 --licm-versioning-max-depth-threshold=0
---licm-max-num-uses-traversed=24
 --memdep-block-number-limit=2510
 --memdep-block-scan-limit=98
 --jump-threading-threshold=16
@@ -56,7 +55,9 @@ Okay so, this effectively leaves us with [codegen options](https://doc.rust-lang
 --max-nested-scalar-reduction-interleave=2
 ```
 
-==TODO: Explain some reasoning behind the parameters==
+The results have a few interesting points. In the [previous work](https://arxiv.org/pdf/2508.17518) it is already known that inlining is the most impactful optimization. That is why the optimizer set the threshold to roughly 21 times [the default](https://llvm.org/doxygen/InlineCost_8cpp_source.html). Related flags (`--inline-instr-cost`, `--inline-memaccess-cost`, `--inline-call-penalty`) also push the optimizer to prioritize inlining. The flag `--max-speculation-depth` is pushed all the way to zero because we do not have any branch predictor. Beyond that, the memory dependence limits (`--memdep-block-number-limit`, `--available-load-scan-limit`) are adjusted to give LLVM more space for identifying redundant operations.
+
+A few of the other remaining passes lower the thresholds to effectively disable features that the zkVM does not possess. The flag `--disable-licm-promotion` was added manually because the previous study found that licm was the most harmful pass.
 
 ### Codegen options
 
@@ -70,13 +71,13 @@ I also tested optimising for size with `opt-level=s`, by reasoning that larger m
 
 ## Results
 
-The profiling was done using [zkevm-benchmark-workload](https://github.com/eth-act/zkevm-benchmark-workload) on mainnet blocks 24949787 - 24949811 and result show consistent reduction of the AIR-costs by something over 10%. The average cost per block on the baseline is 44.22B, and the optimized version 39.54B.
+The profiling was done using [zkevm-benchmark-workload](https://github.com/eth-act/zkevm-benchmark-workload) on mainnet blocks 24949787 - 24949811 and results show consistent reduction of the AIR-costs by something over 10%. The average cost per block on the baseline is 44.22B, and the optimized version 39.54B.
 
 ![block_costs_comparison.png](/assets/images/blogs/block_costs_comparison.png)
 
 ## Unexplored directions
 
-Once could write a custom LLVM passes with [llvm-plugin](https://crates.io/crates/llvm-plugin). This would allow writing passes tailored to zkVM cost models without forking the compiler, since plugins load at compile time into an unmodified binary. This task seems to be quite complex, and potential improvement was unclear. Besides that it is also possible to give the compiler more context about the program with [Profile Guided Optimization](https://doc.rust-lang.org/rustc/profile-guided-optimization.html). Since we are compiling for bare-metal, this makes the instrumentation more complicated. For sure it is possible to make this work but the optimizations are calibrated for standard CPU cost models and in this case I did not have reasonable estimate for benefit on the zkVM.
+One could write a custom LLVM passes with [llvm-plugin](https://crates.io/crates/llvm-plugin). This would allow writing passes tailored to zkVM cost models without forking the compiler, since plugins load at compile time into an unmodified binary. This task seems to be quite complex, and potential improvement was unclear. Besides that it is also possible to give the compiler more context about the program with [Profile Guided Optimization](https://doc.rust-lang.org/rustc/profile-guided-optimization.html). Since we are compiling for bare-metal, this makes the instrumentation more complicated. For sure it is possible to make this work but the optimizations are calibrated for standard CPU cost models and in this case I did not have reasonable estimate for benefit on the zkVM.
 
 ---
 
