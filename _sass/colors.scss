@@ -34,7 +34,7 @@ $dark-content-bg: #2d353b;
 $dark-text: #d8caaf;
 $dark-border: #4d575f;
 $dark-primary: #a7c080;
-$dark-primary-alt: #e69875;
+$dark-primary-alt: #e9875a;
 
 :root {
   --bg-color: #{$light-bg};
@@ -100,4 +100,34 @@ $dark-primary-alt: #e69875;
   --danger-bg-color: #362626;
   --danger-border-color: #d9534f;
   --danger-title-color: #ff6b68;
+}
+
+/* Dark theme syntax highlighting overrides — minima defaults are light-bg only */
+[data-theme="dark"] .highlight {
+    color: #d3c6aa; /* base text */
+
+    .c, .cm, .c1, .cs { color: #859289; font-style: italic } /* Comments → muted */
+    .err              { color: #e67e80; background-color: transparent }
+    .k, .kc, .kd, .kp, .kr { color: #e69875; font-weight: bold } /* Keywords → orange */
+    .kt               { color: #d699b6; font-weight: bold } /* Keyword.Type → purple */
+    .o, .ow           { color: #d3c6aa; font-weight: bold } /* Operators */
+    .m, .mf, .mh, .mi, .mo, .il { color: #83c092 } /* Numbers → cyan-green */
+    .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1 { color: #a7c080 } /* Strings → green */
+    .sr               { color: #83c092 } /* Regex */
+    .ss               { color: #d699b6 } /* Symbol */
+    .na               { color: #83c092 } /* Name.Attribute */
+    .nb, .bp          { color: #7fbbb3 } /* Builtins → cyan */
+    .nc               { color: #d699b6; font-weight: bold } /* Name.Class */
+    .no, .nv, .vc, .vg, .vi { color: #83c092 } /* Constants/Variables */
+    .ni               { color: #d699b6 } /* Name.Entity */
+    .ne, .nf          { color: #7fbbb3; font-weight: bold } /* Functions → cyan */
+    .nn               { color: #d3c6aa } /* Namespace */
+    .nt               { color: #7fbbb3 } /* Name.Tag */
+    .cp               { color: #859289; font-weight: bold } /* Comment.Preproc */
+    .gd               { color: #e67e80 } /* Deleted */
+    .gi               { color: #a7c080 } /* Inserted */
+    .gh, .gu          { color: #859289 } /* Heading/Subheading */
+    .go               { color: #859289 } /* Output */
+    .gp               { color: #a7c080 } /* Prompt */
+    .w                { color: #859289 } /* Whitespace */
 }
