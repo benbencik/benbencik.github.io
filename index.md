@@ -146,9 +146,12 @@ layout: page
           </svg>
       </a>
       <a href="https://x.com/BencikBenj91172" class="social-link" target="_blank" aria-label="X">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" class="bi bi-twitter-x" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-          <path d="M12.6 0.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867 -5.07 -4.425 5.07H0.316l5.733 -6.57L0 0.75h5.063l3.495 4.633L12.601 0.75Zm-0.86 13.028h1.36L4.323 2.145H2.865z" stroke-width="1"></path>
+          class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+          <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
         </svg>
       </a>
       <a href="https://soundcloud.com/kalnavoda" class="social-link" aria-label="SoundCloud">
