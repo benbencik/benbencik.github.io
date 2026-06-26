@@ -178,6 +178,26 @@ blockquote {
 }
 
 /* ====================================
+   IMAGES
+==================================== */
+.post-content img, .post img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 0.4rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .post-content img,
+[data-theme="dark"] .post img {
+    filter: brightness(0.88) contrast(1.02);
+    border-color: #6b7a84;
+    box-shadow: 0 0 0 1px #6b7a84, 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* ====================================
    CODE & SYNTAX HIGHLIGHTING
 ==================================== */
 code {
