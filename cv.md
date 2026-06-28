@@ -36,6 +36,7 @@ order: 1
     width: 65px;
     height: 65px;
     object-fit: contain;
+    transform: translateY(-15px);
     /* padding: 8px; */
     border-radius: 8px;
     border: 3px solid var(--border-color);
@@ -191,7 +192,7 @@ order: 1
 
 <div class="cv-entry">
     <div class="cv-heading">
-        <div class="heading-text">
+        <div class="cv-heading-text">
             <strong>ZK Cryptography Intern</strong><br>
             <span class="cv-subheading">
                 <a href="https://www.maya-zk.com/"> MAYA-ZK</a> • [06/2023 - 05/2024] <br>
@@ -207,7 +208,7 @@ order: 1
 
 <div class="cv-entry">
     <div class="cv-heading">
-        <div class="heading-text">
+        <div class="cv-heading-text">
             <strong>Automation Intern Engineer</strong><br>
             <span class="cv-subheading">
                 <a href="https://www.comap-control.com/"> ComAp</a> • [07/2022 - 09/2022] <br>
@@ -223,7 +224,7 @@ order: 1
 
 <div class="cv-entry">
     <div class="cv-heading">
-        <div class="heading-text">
+        <div class="cv-heading-text">
             <strong>Application Programmer</strong><br>
             <span class="cv-subheading">
                 <a href="https://www.aeromobil.com/"> AeroMobil</a> • [01/2018 - 03/2019] <br>
