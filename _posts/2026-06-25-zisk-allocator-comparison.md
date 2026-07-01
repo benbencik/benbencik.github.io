@@ -20,7 +20,7 @@ All allocators can be selected via Cargo feature:
 
 **talc**: Similar mechanism to dlmalloc with merging of adjacent free blocks, but organizes free blocks into buckets.
 
-**tlfs** ([explainer](https://ricefields.me/2024/04/20/tlsf-allocator.html)): Instead of searching a list, it uses a two-level bitmap to jump directly to a free block of the right size. Amortized O(1) alloc/free.
+**tlsf** ([explainer](https://ricefields.me/2024/04/20/tlsf-allocator.html)): Instead of searching a list, it uses a two-level bitmap to jump directly to a free block of the right size. Amortized O(1) alloc/free.
 
 ## How are the costs calculated
 
@@ -44,7 +44,7 @@ The first setting where I evaluated the allocator is on the mainnet blocks 24949
 | Max gas block 56M: `block 24949791`         | 77.71B | 83.18B   | 83.86B | 87.24B |
 | Average over all blocks                     | 45.44B | 48.61B   | 49.02B | 51.06B |
 
-**In all cases it holds: `bump < dlmalloc < talc < tlfs`**. I wanted to check min and max gas block to see if there is noticeable difference in the costs, but it does not seem to be the case. The delta for bump and dlmalloc is consistent across the three rows (6%, 6.5%, 6.5%). We can also take a look at the distribution of the costs across the state machines.
+**In all cases it holds: `bump < dlmalloc < talc < tlsf`**. I wanted to check min and max gas block to see if there is noticeable difference in the costs, but it does not seem to be the case. The delta for bump and dlmalloc is consistent across the three rows (6%, 6.5%, 6.5%). We can also take a look at the distribution of the costs across the state machines.
 
 ![sm_breakdown](/assets/images/blogs/sm_breakdown.png)
 
@@ -70,14 +70,14 @@ The memory usage across dlmalloc, talc, and tlsf is similar. Since memory is cle
 
 ### Allocator comparison
 
-Across *almost all* of the tests we are seeing `bump < dlmalloc < talc < tlfs` in terms of the AIR-costs. The profiling data also show the costs of the function calls. The average for the above 100M EEST tests is the following:
+Across *almost all* of the tests we are seeing `bump < dlmalloc < talc < tlsf` in terms of the AIR-costs. The profiling data also show the costs of the function calls. The average for the above 100M EEST tests is the following:
 
-| Compare allocator function calls | bump                    | dlmalloc | talc  | tlfs  |
+| Compare allocator function calls | bump                    | dlmalloc | talc  | tlsf  |
 | -------------------------------- | ----------------------- | -------- | ----- | ----- |
 | alloc                            | too small, not recorded | 1.32%    | 1.89% | 2.37% |
 | free                             | 0%                      | 0.85%    | 1.13% | 1.83% |
 
-Bump does the least work resulting in lowest costs. After that dlmalloc is the second candidate. On native hardware, talc and tlfs can win through cache locality or fast bit operations. These advantages do not translate from standard computation to zkVM.
+Bump does the least work resulting in lowest costs. After that dlmalloc is the second candidate. On native hardware, talc and tlsf can win through cache locality or fast bit operations. These advantages do not translate from standard computation to zkVM.
 
 Without getting into too many allocator details, let's look into tests with higher gas where the memory limits are a bigger problem. The following tests take long to compute, so I will compare just dlmalloc and bump.
 
@@ -151,7 +151,7 @@ RUST_LOG=info RAYON_NUM_THREADS=2 cargo run --release -p ere-hosts \
 
 ### Data tables
 
-| Cost distribution mainnet: ethrex b112f94 ZisK v16.0.1 | bump   | dlmalloc | talc   | tlfs   |
+| Cost distribution mainnet: ethrex b112f94 ZisK v0.16.1 | bump   | dlmalloc | talc   | tlsf   |
 | ------------------------------------------------------ | ------ | -------- | ------ | ------ |
 | `MAIN`                                                 | 27.0B  | 29.5B    | 29.7B  | 31.3B  |
 | `PRECOMPILES`                                          | 7.8B   | 7.8B     | 7.8B   | 7.8B   |
@@ -159,7 +159,7 @@ RUST_LOG=info RAYON_NUM_THREADS=2 cargo run --release -p ere-hosts \
 | `MEMORY`                                               | 3.5B   | 3.8B     | 3.7B   | 3.7B   |
 | `BASE`                                                 | 293.6M | 293.6M   | 293.6M | 293.6M |
 
-| Cost by allocator (100M): ethrex 81484be ZisK v16.0.1 | bump    | dlmalloc | talc    | tlfs    |
+| Cost by allocator (100M): ethrex 81484be ZisK v0.16.1 | bump    | dlmalloc | talc    | tlsf    |
 | ----------------------------------------------------- | ------- | -------- | ------- | ------- |
 | arithmetic[opcode_ADD-benchmark]                      | 157.82B | 157.83B  | 157.83B | 157.84B |
 | arithmetic[opcode_MULMOD-benchmark]                   | 116.54B | 116.55B  | 116.55B | 116.56B |
@@ -171,7 +171,7 @@ RUST_LOG=info RAYON_NUM_THREADS=2 cargo run --release -p ere-hosts \
 | storage_access_cold_benchmark[SSTORE_new-benchmark]   | 420.88B | 430.70B  | 435.47B | 443.26B |
 | storage_access_warm_benchmark[SLOAD-benchmark]        | 90.140B | 90.12B   | 90.13B  | 90.19B  |
 
-| MEM usage by allocator (100M): ethrex 81484be ZisK v16.0.1 | bump   | dlmalloc | talc  | tlfs  |
+| MEM usage by allocator (100M): ethrex 81484be ZisK v0.16.1 | bump   | dlmalloc | talc  | tlsf  |
 | ---------------------------------------------------------- | ------ | -------- | ----- | ----- |
 | arithmetic[opcode_ADD-benchmark]                           | 0.48%  | 0.46%    | 0.45% | 0.45% |
 | arithmetic[opcode_MULMOD-benchmark]                        | 0.48%  | 0.46%    | 0.45% | 0.45% |
@@ -183,7 +183,7 @@ RUST_LOG=info RAYON_NUM_THREADS=2 cargo run --release -p ere-hosts \
 | storage_access_cold_benchmark[SSTORE_new-benchmark]        | 0.49%  | 0.47%    | 0.46% | 0.46% |
 | storage_access_warm_benchmark[SLOAD-benchmark]             | 0.56%  | 0.46%    | 0.45% | 0.45% |
 
-| Cost by allocator (200M): ethrex 81484be ZisK v16.0.1            | bump 512MB Mem | bump 1536MB Mem | dlmalloc |
+| Cost by allocator (200M): ethrex 81484be ZisK v0.16.1            | bump 512MB Mem | bump 1536MB Mem | dlmalloc |
 | ---------------------------------------------------------------- | -------------- | --------------- | -------- |
 | mod_arithmetic[opcode_MULMOD-mod_bits_191-benchmark]             | 2.375T         | 2.375T          | 2.375T   |
 | ecrecover[ecrecover-benchmark]                                   | 156.34B        | 156.36B         | 160.06B  |
@@ -192,7 +192,7 @@ RUST_LOG=info RAYON_NUM_THREADS=2 cargo run --release -p ere-hosts \
 | test_modexp[mod_1024_exp_2-benchmark]                            | OOM            | 1.15T           | 1.17T    |
 | sha256[benchmark]                                                | OOM            | 82.37B          | 82.40B   |
 
-| Absolute MEM usage by allocator (200M): ethrex 81484be ZisK v16.0.1 | bump MEM 1536MB (B) | dlmalloc (B) |
+| Absolute MEM usage by allocator (200M): ethrex 81484be ZisK v0.16.1 | bump MEM 1536MB (B) | dlmalloc (B) |
 | ------------------------------------------------------------------- | ------------------- | ------------ |
 | mod_arithmetic[opcode_MULMOD-mod_bits_191-benchmark]                | 2,547,923           | 2,424,832    |
 | ecrecover[ecrecover-benchmark]                                      | 15,836,691          | 2,424,832    |
