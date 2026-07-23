@@ -96,8 +96,127 @@ order: 1
         <img src="../assets/images/charles-uni.jpg" class="cv-img" alt="Charles University">
     </div>
     <div class="cv-description">
-        Thesis: <a href="https://dspace.cuni.cz/bitstream/handle/20.500.11956/192912/130401356.pdf?sequence=1&isAllowed=y">On \(\mathcal{P}\mathfrak{lon}\mathcal{K}\)  SNARK</a> analyzed the IOP in detail and described associated cryptographic primitives. Moreover the thesis suggests optimization for arithmetization phase implemented on fork of ZK-Garage.
+        Thesis: <a href="https://dspace.cuni.cz/bitstream/handle/20.500.11956/192912/130401356.pdf?sequence=1&isAllowed=y">On \(\mathcal{P}\mathfrak{lon}\mathcal{K}\)  SNARK</a> analyzed the IOP in detail and described associated cryptographic primitives. Moreover, the thesis suggests optimization for arithmetization phase implemented on fork of ZK-Garage.
         <p>Advisor: Pavel Hubáček</p>
+    </div>
+</div>
+
+<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
+
+
+### Work Experience
+
+<div class="cv-entry">
+    <div class="cv-heading">
+        <div class="cv-heading-text">
+            <strong>Research Fellow </strong><br>
+            <span class="cv-subheading">
+                <a href="https://ethz.ch/en.html">Applied Cryptography Group</a>, <a href="https://ethz.ch/en.html">ETH Zürich</a> • [07/2026 - 08/2026] <br>
+                Switzerland, Zürich 🇨🇭
+            </span>
+        </div>
+        <img src="../assets/images/eth.svg" class="cv-img" alt="Stablelab">
+    </div>
+    <div class="cv-description">
+        Working with <a href="https://paterson1.github.io/">Kenny Paterson</a> on a protocol for Oblivious Message Retrieval as part of the <a href="https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/ssr-fellowship.html">ETH Student Summer Research Fellowship</a>. Results soon.
+    </div>
+</div>
+
+<div class="cv-entry">
+    <div class="cv-heading">
+        <div class="cv-heading-text">
+            <strong>Intern L1zkEVM Team</strong><br>
+            <span class="cv-subheading">
+                <a href="https://ethereum.org/foundation/">Ethereum Foundation</a> • [04/2026 - 06/2026] <br>
+                Berlin, Germany 🇩🇪
+            </span>
+        </div>
+        <img src="../assets/images/ethereum.jpg" class="cv-img" alt="Ethereum Foundation">
+    </div>
+    <div class="cv-description">
+        Selected for the <a href="https://blog.ethereum.org/2025/10/14/internship-2026">2026 EF internship</a>. Optimised the guest program for zkEVM (specifically Ethrex ↔ ZisK), reducing proving AIR-costs <b>by 42%</b>.
+        Presented findings on <a href="https://youtu.be/omWy4vNM6Pg?t=2997">zkEVM breakout call #06</a>. Related blogs: <a href="/blogs/zisk-allocator-comparison.html">ZisK Allocator Comparison</a>, <a href="/blogs/compiler-optimization-zkevm.html">Compiler Optimization zkEVM</a>.
+    </div>
+</div>
+
+<div class="cv-entry">
+    <div class="cv-heading">
+        <div class="cv-heading-text">
+            <strong>BlockSprint: AI-Driven DAO Governance</strong><br>
+            <span class="cv-subheading">
+                <a href="https://stablelab.xyz/">Stablelab</a> • [05/2025 - 09/2025] <br>
+                Munich, Germany 🇩🇪
+            </span>
+        </div>
+        <img src="../assets/images/stablelab.jpg" class="cv-img" alt="Stablelab">
+    </div>
+    <div class="cv-description">
+        In this internship, we worked on a prototype of a personalized AI DAO delegate. I worked on smart contracts that allow delegation and voting across multiple DAOs in on-chain and off-chain settings.
+    </div>
+</div>
+
+<div class="cv-entry">
+    <div class="cv-heading">
+        <div class="cv-heading-text">
+            <strong>Research Intern</strong><br>
+            <span class="cv-subheading">
+                <a href="http://dimacs.rutgers.edu/"> DIMACS Rutgers University</a> • [05/2025 - 09/2025] <br>
+                New Brunswick, New Jersey 🇺🇸
+            </span>
+        </div>
+        <img src="../assets/images/dimacs.png" class="cv-img" alt="dimacs">
+    </div>
+    <div class="cv-description">
+        Research in discrete mathematics under DIMACS on memory-query tradeoffs for property testing on graphs. Advisor: Sumegha Garg.
+    </div>
+</div>
+
+
+<div class="cv-entry">
+    <div class="cv-heading">
+        <div class="cv-heading-text">
+            <strong>ZK Cryptography Intern</strong><br>
+            <span class="cv-subheading">
+                <a href="https://www.maya-zk.com/"> MAYA-ZK</a> • [06/2023 - 05/2024] <br>
+                Prague, Czech Republic 🇨🇿
+            </span>
+        </div>
+        <img src="../assets/images/maya-zk.jpg" class="cv-img" alt="MAYA-ZK">
+    </div>
+    <div class="cv-description">
+        At MAYA-ZK, I worked on the development of zero-knowledge protocols. My primary focus was on the software side, optimizing and fine-tuning Rust implementation of PLONK zkSNARK.
+    </div>
+</div>
+
+<!-- <div class="cv-entry">
+    <div class="cv-heading">
+        <div class="cv-heading-text">
+            <strong>Automation Intern Engineer</strong><br>
+            <span class="cv-subheading">
+                <a href="https://www.comap-control.com/"> ComAp</a> • [07/2022 - 09/2022] <br>
+                Prague, Czech Republic 🇨🇿
+            </span>
+        </div>
+        <img src="../assets/images/comap.png" class="cv-img" alt="ComAp">
+    </div>
+    <div class="cv-description">
+        Offered the internship after securing 2nd place at a <a href="https://unit.bestprague.cz/"> UnIT Hackathon</a>. Developed and maintained a Python-based testing environment for control solutions in smart power generation.
+    </div>
+</div> -->
+
+<div class="cv-entry">
+    <div class="cv-heading">
+        <div class="cv-heading-text">
+            <strong>Application Programmer</strong><br>
+            <span class="cv-subheading">
+                <a href="https://www.aeromobil.com/"> AeroMobil</a> • [01/2018 - 03/2019] <br>
+                Bratislava, Slovakia 🇸🇰
+            </span>
+        </div>
+        <img src="../assets/images/aeromobil.png" class="cv-img" alt="AeroMobil">
+    </div>
+    <div class="cv-description">
+        I contributed to the development and prototyping of the flying car. As a programmer, I worked on applications calculating physics simulations for stress analysis of mechanical components.
     </div>
 </div>
 
@@ -139,106 +258,6 @@ order: 1
 
 <div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
 
-### Work Experience
-
-<div class="cv-entry">
-    <div class="cv-heading">
-        <div class="cv-heading-text">
-            <strong>Research Fellow</strong><br>
-            <span class="cv-subheading">
-                <a href="https://ethz.ch/en.html">ETH Zürich</a> • [07/2026 - 08/2026] <br>
-                Switzerland, Zürich 🇨🇭
-            </span>
-        </div>
-        <img src="../assets/images/eth.svg" class="cv-img" alt="Stablelab">
-    </div>
-    <div class="cv-description">
-        I will be working on a CS research project in programme <a href="https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/ssr-fellowship.html">ETH Student Summer Research Fellowship</a>. Selected as one of 20 SSRF students among over 2000 applicants.
-    </div>
-</div>
-
-<div class="cv-entry">
-    <div class="cv-heading">
-        <div class="cv-heading-text">
-            <strong>BlockSprint: AI-Driven DAO Governance</strong><br>
-            <span class="cv-subheading">
-                <a href="https://stablelab.xyz/">Stablelab</a> • [05/2025 - 09/2025] <br>
-                Munich, Germany 🇩🇪
-            </span>
-        </div>
-        <img src="../assets/images/stablelab.jpg" class="cv-img" alt="Stablelab">
-    </div>
-    <div class="cv-description">
-        In this internship, we worked on a prototype of a personalized AI DAO delegate. I worked on smart contracts that allow delegation and voting across multiple DAOs in on-chain and off-chain settings.
-    </div>
-</div>
-
-<div class="cv-entry">
-    <div class="cv-heading">
-        <div class="cv-heading-text">
-            <strong>Research Intern</strong><br>
-            <span class="cv-subheading">
-                <a href="http://dimacs.rutgers.edu/"> DIMACS Rutgers University</a> • [05/2025 - 09/2025] <br>
-                New Brunswick, New Yersey 🇺🇸
-            </span>
-        </div>
-        <img src="../assets/images/dimacs.png" class="cv-img" alt="dimacs">
-    </div>
-    <div class="cv-description">
-        Research in discrete mathematics under DIMACS on memory-query tradeoffs for property testing on graphs. Advisor: Sumegha Garg
-    </div>
-</div>
-
-
-<div class="cv-entry">
-    <div class="cv-heading">
-        <div class="cv-heading-text">
-            <strong>ZK Cryptography Intern</strong><br>
-            <span class="cv-subheading">
-                <a href="https://www.maya-zk.com/"> MAYA-ZK</a> • [06/2023 - 05/2024] <br>
-                Prague, Czech Republic 🇨🇿
-            </span>
-        </div>
-        <img src="../assets/images/maya-zk.jpg" class="cv-img" alt="MAYA-ZK">
-    </div>
-    <div class="cv-description">
-        At MAYA-ZK, I worked on the development of zero-knowledge protocols. My primary focus was on the software side, optimizing and fine-tuning Rust implementation of PLONK zkSNARK.
-    </div>
-</div>
-
-<div class="cv-entry">
-    <div class="cv-heading">
-        <div class="cv-heading-text">
-            <strong>Automation Intern Engineer</strong><br>
-            <span class="cv-subheading">
-                <a href="https://www.comap-control.com/"> ComAp</a> • [07/2022 - 09/2022] <br>
-                Prague, Czech Republic 🇨🇿
-            </span>
-        </div>
-        <img src="../assets/images/comap.png" class="cv-img" alt="ComAp">
-    </div>
-    <div class="cv-description">
-        Offered the internship after securing 2nd place at a <a href="https://unit.bestprague.cz/"> UnIT Hackathon</a>. Developed and maintained a Python-based testing environment for control solutions in smart power generation.
-    </div>
-</div>
-
-<div class="cv-entry">
-    <div class="cv-heading">
-        <div class="cv-heading-text">
-            <strong>Application Programmer</strong><br>
-            <span class="cv-subheading">
-                <a href="https://www.aeromobil.com/"> AeroMobil</a> • [01/2018 - 03/2019] <br>
-                Bratislava, Slovakia 🇸🇰
-            </span>
-        </div>
-        <img src="../assets/images/aeromobil.png" class="cv-img" alt="AeroMobil">
-    </div>
-    <div class="cv-description">
-        I contributed to the development and prototyping of the flying car. As a programmer, I worked on applications calculating physics simulations for stress analysis of mechanical components.
-    </div>
-</div>
-
-<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
-
 ### [Projects](/projects)
-View my technical projects and hackathon participations at projects page.
+
+View my projects and hackathon participations at projects page.
