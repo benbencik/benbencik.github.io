@@ -45,11 +45,11 @@ order: 3
         text-decoration: none;
     }
 
-    /* .projects-section {
+    .projects-section {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
-    } */
+    }
 
     .project-card {
         border: 1px solid var(--border-color);
@@ -60,9 +60,10 @@ order: 3
     }
  
     /* Overwrite to make wider */
-    /* .page-content .wrapper {
-        max-width: 900px;
-    } */
+    .page-content .wrapper,
+    .site-header .wrapper {
+        max-width: 1000px;
+    }
 
 </style>
 
