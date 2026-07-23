@@ -21,7 +21,7 @@ body {
 
 /* Main content wrapper */
 .page-content {
-    padding: 1rem 0;
+    padding: 0.0rem 0;
 }
 
 .wrapper {
@@ -59,22 +59,10 @@ a:hover {
 
 }
 
-h1 {
-    font-size: 2.5rem !important;
-    text-decoration: underline italic !important;
-}
-
-h2 {
-    font-size: 0.5rem;
-}
-
-h3 {
-    font-size: 2rem;
-}
-
-h4 {
-    font-size: 1.5rem;
-}
+h1, .post-content h1, .post-title { font-size: 2rem; }
+h2, .post-content h2 { font-size: 1.5rem; }
+h3, .post-content h3 { font-size: 1.2rem; }
+h4, .post-content h4 { font-size: 1rem; }
 
 blockquote {
     border-left: 4px solid var(--primary-color-alt);
