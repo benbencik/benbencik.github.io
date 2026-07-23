@@ -49,6 +49,7 @@ order: 3
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
+        align-items: start;
     }
 
     .project-card {
@@ -191,6 +192,8 @@ order: 3
     </div>
 </div>
 
+<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
+
 ## Open Source Contributions
 
 <div class="projects-section">
@@ -218,6 +221,8 @@ order: 3
         </div>
     </div>
 </div>
+
+<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
 
 ## Misc
 
@@ -263,7 +268,10 @@ order: 3
     </div>
 </div>
 
-## University Projects 
+<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
+
+
+## University Projects
 
 <div class="projects-section">
     <div class="card" onclick="toggleDescription('chopinDesc')">
