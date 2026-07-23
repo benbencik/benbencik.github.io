@@ -80,6 +80,30 @@ order: 3
 ## Hackathons
 
 <div class="projects-section">
+    <div class="card" onclick="toggleDescription('flexProverDesc')">
+        <div class="card-header">
+            <h3>FlexProver</h3>
+            <div class="card-meta">ETHGlobal Cannes 2026 🇫🇷 <span class="project-award"><br>🥈 2nd Place Flare Network</span></div>
+        </div>
+        <p class="card-tags">
+            <span class="tag">TEE</span>
+            <span class="tag">Privacy</span>
+            <span class="tag">DeFi</span>
+            <span class="tag">Blockchain</span>
+        </p>
+        <div id="flexProverDesc" style="display: none;">
+            <p>
+                A project enabling traders to prove trading performance on-chain without exposing additional information. Users encrypt their Binance API keys via a Trusted Execution Environment (TEE), which verifies performance metrics and generates cryptographically signed attestations. Traders can selectively prove specific metrics like PnL.
+            </p>
+            <p>
+                Built on Flare Confidential Compute (FCC), credentials are decrypted inside a secure enclave. After the exchange API is queried the signed proofs are published on-chain.
+            </p>
+            <div class="card-links">
+                <a href="https://ethglobal.com/showcase/flexprover-7xuf8" class="button">ETH Global Showcase</a>
+                <a href="https://github.com/emmatekulova/flex_prover" class="button">Github repo</a>
+            </div>
+        </div>
+    </div>
     <div class="card" onclick="toggleDescription('cryptoCachingDesc')">
         <div class="card-header">
             <h3>Proofs of inference</h3>
@@ -145,7 +169,7 @@ order: 3
     <div class="card" onclick="toggleDescription('HackerHouseDesc')">
         <div class="card-header">
             <h3>Verifiable Benchmarks</h3>
-            <div class="card-meta">EighenLayer Hacker House Berlin 2025 🇩🇪 <span class="project-award"></span></div>
+            <div class="card-meta">EigenLayer Hacker House Berlin 2025 🇩🇪 <span class="project-award"></span></div>
         </div>
         <p class="card-tags">
             <span class="tag">Privacy</span>
@@ -161,6 +185,34 @@ order: 3
             </p>
             <div class="card-links">
                 <a href="https://github.com/benbencik/verifiable-benchmarks" class="button">Github repo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+## Open Source Contributions
+
+<div class="projects-section">
+    <div class="card" onclick="toggleDescription('smallFpDesc')">
+        <div class="card-header">
+            <h3>Arkworks Small Field Support</h3>
+            <div class="card-meta"><a href="https://github.com/arkworks-rs/algebra">arkworks-rs/algebra</a> • Merged March 2026</div>
+        </div>
+        <p class="card-tags">
+            <span class="tag">Rust</span>
+            <span class="tag">Cryptography</span>
+            <span class="tag">Finite Fields</span>
+        </p>
+        <div id="smallFpDesc" style="display: none;">
+            <p>
+                Contributed small field support to <a href="https://github.com/arkworks-rs/algebra">Arkworks</a> - Rust ecosystem for zkSNARK development. The field implementation used <code>BigInt: [u64]</code> for all finite fields. This is unnecessarily expensive for fields with modulus &lt 128-bits, common in modern proof systems.
+            </p>
+            <p>
+                Introduced <code>SmallFp</code>, a drop-in replacement that uses native Rust types (u8/u16/u32/u64) selected automatically at compile time via a new proc macro. The implementation has optimizations for popular primes like <code>BabyBear, Goldilocks, ...</code>. No breaking changes. Benchmarks show 20–35% improvement in addition, 35–60% in inversion, and up to 27% in end-to-end sumcheck. Also opens a clear path toward SIMD/vectorized field arithmetic.
+            </p>
+            <p>Collaboration with Andrew Zitek-Estrada (EPFL).</p>
+            <div class="card-links">
+                <a href="https://github.com/arkworks-rs/algebra/pull/1044" class="button">Pull Request 1044</a>
             </div>
         </div>
     </div>
@@ -210,10 +262,33 @@ order: 3
     </div>
 </div>
 
-
 ## University Projects 
 
 <div class="projects-section">
+    <div class="card" onclick="toggleDescription('chopinDesc')">
+        <div class="card-header">
+            <h3>Implementation of Chopin PCS</h3>
+            <div class="card-meta">Charles University • Spring 2026</div>
+        </div>
+        <p class="card-tags">
+            <span class="tag">Rust</span>
+            <span class="tag">Cryptography</span>
+            <span class="tag">Polynomial Commitments</span>
+        </p>
+        <div id="chopinDesc" style="display: none;">
+            <p>
+                Implementation of the <a href="https://eprint.iacr.org/2026/480.pdf">Chopin polynomial commitment scheme</a> into the <a href="https://github.com/benbencik/nova">Nova</a> proof system. Chopin replaces the <a href="https://eprint.iacr.org/2025/385.pdf">Mercury</a> univariate KZG with a bivariate KZG construction. This gets significantly faster prover times and lower assumptions.
+            </p>
+            <p>
+                Benchmarks across instance sizes log(n) = 20-25 show Chopin is <b>~60% faster</b> than Mercury.
+            </p>
+            <p>Work done with Pavel Hubáček.</p>
+            <div class="card-links">
+                <a href="https://github.com/benbencik/nova" class="button">GitHub</a>
+                <a href="https://eprint.iacr.org/2026/480.pdf" class="button">Paper</a>
+            </div>
+        </div>
+    </div>
     <div class="card" onclick="toggleDescription('fluidDynamicsDesc')">
         <div class="card-header">
             <h3>Optimization of fluid dynamics simulation</h3>
