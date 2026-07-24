@@ -12,7 +12,7 @@ order: 3
 
     /* Open source contributions */
     .contribution-card {
-        margin-bottom: 2rem;
+        /* margin-bottom: 2rem; */
         padding: 1.5rem;
         border: 1px solid var(--border-color);
         border-radius: 0.5rem;
@@ -46,25 +46,28 @@ order: 3
     }
 
     .projects-section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        /* display: grid; */
+        /* grid-template-columns: repeat(2, 1fr); */
+        /* gap: 1.25rem; */
+        /* align-items: start; */
+        display: flex;
+        flex-direction: column;
         gap: 1.25rem;
-        align-items: start;
     }
 
-    .project-card {
+    /* .project-card {
         border: 1px solid var(--border-color);
         border-radius: 8px;
         padding: 1rem;
         background: var(--content-bg-color);
         transition: transform 0.2s ease;
-    }
+    } */
  
-    /* Overwrite to make wider */
+    /* Overwrite to make wider — disabled
     .page-content .wrapper,
     .site-header .wrapper {
         max-width: 1000px;
-    }
+    } */
 
 </style>
 
@@ -77,6 +80,11 @@ order: 3
             element.style.display = "none";
         }
     }
+
+    /* equalizeCardHeights — only needed for 2-col grid, kept for reference
+    function equalizeCardHeights() { ... }
+    window.addEventListener('load', equalizeCardHeights);
+    */
 </script>
 
 ## Hackathons
