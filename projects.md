@@ -114,7 +114,7 @@ order: 3
             </div>
         </div>
     </div>
-    <div class="card" onclick="toggleDescription('cryptoCachingDesc')">
+    <div class="card" onclick="toggleDescription('cryptoCachingDesc')" style="border-color: color-mix(in srgb, var(--primary-color-alt) 45%, var(--border-color));">
         <div class="card-header">
             <h3>Proofs of inference</h3>
             <div class="card-meta">ETHGlobal Prague 2025 🇨🇿 <span class="project-award"><br>🥇 1st Place Hedera 🥇 1st Place Protocol Labs </span></div>
@@ -205,7 +205,7 @@ order: 3
 ## Open Source Contributions
 
 <div class="projects-section">
-    <div class="card" onclick="toggleDescription('smallFpDesc')">
+    <div class="card" onclick="toggleDescription('smallFpDesc')" style="border-color: color-mix(in srgb, var(--primary-color-alt) 45%, var(--border-color));">
         <div class="card-header">
             <h3>Arkworks Small Field Support</h3>
             <div class="card-meta"><a href="https://github.com/arkworks-rs/algebra">arkworks-rs/algebra</a> • Merged March 2026</div>
