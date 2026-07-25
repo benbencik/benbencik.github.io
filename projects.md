@@ -10,64 +10,54 @@ order: 3
         text-decoration: underline;
     }
 
-    /* Open source contributions */
-    .contribution-card {
-        /* margin-bottom: 2rem; */
-        padding: 1.5rem;
-        border: 1px solid var(--border-color);
-        border-radius: 0.5rem;
-        background-color: var(--content-bg-color);
-    }
-
-    .repo-link {
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .contribution-list {
-        margin-top: 1rem;
-    }
-
-    .contribution-item {
-        margin-bottom: 1.5rem;
-        padding-left: 1rem;
-        border-left: 2px solid var(--border-color);
-    }
-
-    .contribution-title {
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-    }
-
-    .contribution-title a {
-        color: var(--primary-color);
-        text-decoration: none;
-    }
-
     .projects-section {
-        /* display: grid; */
-        /* grid-template-columns: repeat(2, 1fr); */
-        /* gap: 1.25rem; */
-        /* align-items: start; */
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
     }
 
-    /* .project-card {
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        padding: 1rem;
-        background: var(--content-bg-color);
+    .section-toggle {
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .section-toggle:hover .section-label {
+        text-decoration: underline;
+    }
+
+    .section-chevron {
+        display: inline-block;
+        font-size: 0.5em;
+        color: var(--primary-color-alt);
         transition: transform 0.2s ease;
-    } */
- 
-    /* Overwrite to make wider — disabled
-    .page-content .wrapper,
-    .site-header .wrapper {
-        max-width: 1000px;
-    } */
+    }
+
+    .section-toggle.open .section-chevron {
+        transform: rotate(90deg);
+    }
+
+    .section-summary {
+        margin: 0.15rem 0 1.5rem 0.5rem;
+        padding-left: 1rem;
+    }
+
+    .section-summary li {
+        cursor: pointer;
+    }
+
+    .section-summary li:hover {
+        text-decoration: underline;
+        color: var(--primary-color);
+    }
+
+    .summary-meta {
+        opacity: 0.65;
+        font-size: 0.9em;
+    }
 
 </style>
 
@@ -81,15 +71,48 @@ order: 3
         }
     }
 
+    function toggleSection(id) {
+        var cards = document.getElementById(id + '-cards');
+        var summary = document.getElementById(id + '-summary');
+        var header = document.getElementById(id + '-header');
+        var open = cards.style.display === "none";
+        cards.style.display = open ? "flex" : "none";
+        summary.style.display = open ? "none" : "block";
+        header.classList.toggle('open', open);
+    }
+
+    // Clicking a bullet opens the section and expands that specific card.
+    function openFromSummary(event, sectionId, cardDescId) {
+        event.stopPropagation();
+        var cards = document.getElementById(sectionId + '-cards');
+        if (cards.style.display === "none") {
+            toggleSection(sectionId);
+        }
+        var desc = document.getElementById(cardDescId);
+        if (desc && desc.style.display === "none") {
+            desc.style.display = "block";
+            desc.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    }
+
     /* equalizeCardHeights — only needed for 2-col grid, kept for reference
     function equalizeCardHeights() { ... }
     window.addEventListener('load', equalizeCardHeights);
     */
 </script>
 
-## Hackathons
+<h2 id="hackathons-header" class="section-toggle" onclick="toggleSection('hackathons')">
+    <span class="section-chevron">▶</span> <span class="section-label">Hackathons</span>
+</h2>
+<ul class="section-summary" id="hackathons-summary">
+    <li onclick="openFromSummary(event, 'hackathons', 'flexProverDesc')">FlexProver <span class="summary-meta">— ETHGlobal Cannes 🇫🇷 | 🥈 2nd Flare Network</span></li>
+    <li onclick="openFromSummary(event, 'hackathons', 'cryptoCachingDesc')">Proofs of inference <span class="summary-meta">— ETHGlobal Prague 🇨🇿 | 🥇 Hedera | 🥇 Protocol Labs</span></li>
+    <li onclick="openFromSummary(event, 'hackathons', 'cryptoCachingDesc2')">Wifi-Radar <span class="summary-meta">— ETHGlobal Buenos Aires 🇦🇷</span></li>
+    <li onclick="openFromSummary(event, 'hackathons', 'cryptoCachingDesc3')">CryptoCaching <span class="summary-meta">— EPFL Hackathon 🇨🇭 | 🥉 Hedera</span></li>
+    <li onclick="openFromSummary(event, 'hackathons', 'HackerHouseDesc')">Verifiable Benchmarks <span class="summary-meta">— EigenLayer Hacker House Berlin 🇩🇪</span></li>
+</ul>
 
-<div class="projects-section">
+<div class="projects-section" id="hackathons-cards" style="display: none;">
     <div class="card" onclick="toggleDescription('flexProverDesc')">
         <div class="card-header">
             <h3>FlexProver</h3>
@@ -200,11 +223,14 @@ order: 3
     </div>
 </div>
 
-<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
+<h2 id="opensource-header" class="section-toggle" onclick="toggleSection('opensource')">
+    <span class="section-chevron">▶</span> <span class="section-label">Open Source Contributions</span>
+</h2>
+<ul class="section-summary" id="opensource-summary">
+    <li onclick="openFromSummary(event, 'opensource', 'smallFpDesc')">Arkworks Small Field Support <span class="summary-meta">— arkworks-rs/algebra</span></li>
+</ul>
 
-## Open Source Contributions
-
-<div class="projects-section">
+<div class="projects-section" id="opensource-cards" style="display: none;">
     <div class="card" onclick="toggleDescription('smallFpDesc')" style="border-color: color-mix(in srgb, var(--primary-color-alt) 45%, var(--border-color));">
         <div class="card-header">
             <h3>Arkworks Small Field Support</h3>
@@ -230,11 +256,15 @@ order: 3
     </div>
 </div>
 
-<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
+<h2 id="misc-header" class="section-toggle" onclick="toggleSection('misc')">
+    <span class="section-chevron">▶</span> <span class="section-label">Misc</span>
+</h2>
+<ul class="section-summary" id="misc-summary">
+    <li onclick="openFromSummary(event, 'misc', 'ResearchChallengeDesc')">Organizing Ethereum Research Challenge <span class="summary-meta">— TUM Blockchain Conference 2025 🇩🇪</span></li>
+    <li onclick="openFromSummary(event, 'misc', 'ecArithmeticDesc')">Elliptic Curve Arithmetic <span class="summary-meta">— Rust side-quest</span></li>
+</ul>
 
-## Misc
-
-<div class="projects-section">
+<div class="projects-section" id="misc-cards" style="display: none;">
     <div class="card" onclick="toggleDescription('ResearchChallengeDesc')">
         <div class="card-header">
             <h3>Organizing Ethereum Research Challenge</h3>
@@ -276,12 +306,17 @@ order: 3
     </div>
 </div>
 
-<div style="text-align: center; margin: 15px 15; font-size: 1.2rem; color: var(--primary-color)">✦ ✦ ✦</div>
+<h2 id="university-header" class="section-toggle" onclick="toggleSection('university')">
+    <span class="section-chevron">▶</span> <span class="section-label">University Projects</span>
+</h2>
+<ul class="section-summary" id="university-summary">
+    <li onclick="openFromSummary(event, 'university', 'chopinDesc')">Implementation of Chopin PCS <span class="summary-meta">— Charles University</span></li>
+    <li onclick="openFromSummary(event, 'university', 'fluidDynamicsDesc')">Optimization of fluid dynamics simulation <span class="summary-meta">— TU Munich 🇩🇪</span></li>
+    <li onclick="openFromSummary(event, 'university', 'mobiusDesc')">Efficient Möbius Computations on Multipermutations <span class="summary-meta">— Charles University</span></li>
+    <li onclick="openFromSummary(event, 'university', 'gnnDesc')">Classification of magnetic phases by GNNs <span class="summary-meta">— Charles University</span></li>
+</ul>
 
-
-## University Projects
-
-<div class="projects-section">
+<div class="projects-section" id="university-cards" style="display: none;">
     <div class="card" onclick="toggleDescription('chopinDesc')">
         <div class="card-header">
             <h3>Implementation of Chopin PCS</h3>
