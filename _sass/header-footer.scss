@@ -4,6 +4,11 @@
     border-bottom: none;
 }
 
+.site-header .wrapper {
+    background-color: var(--header-bg-color);
+    border-radius: 0.5rem;
+}
+
 .site-title {
     letter-spacing: 2px;
     color: var(--primary-color);
