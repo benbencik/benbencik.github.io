@@ -170,13 +170,12 @@ layout: page
   <div class="profile-content">
     <!-- <h3>About Me</h3> -->
     <p>
-      Pursuing a master's degree in <b>Theoretical Computer Science</b> at <i>Charles University</i> in Prague, focused on cryptography. Enthusiastic about trustless, privacy-preserving systems. Balancing in between math and engineering.
+      Pursuing a master's degree in <b>Theoretical Computer Science</b> at <i>Charles University</i> in Prague. Interested in on cryptography, privacy-preserving systems and performance engineering.
     </p>
     <p class="card-tags">
       <span class="tag">cryptograhy</span>
       <span class="tag">rust</span>
-      <span class="tag">information theory</span>
-      <span class="tag">web3</span> 
+      <span class="tag">complexity theory</span>
     </p>
   </div>
 </div>
