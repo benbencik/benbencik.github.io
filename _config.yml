@@ -33,7 +33,7 @@ github_username:  benbencik
 header_pages:
   - cv.md
   - blog.md
-  - presentations.md
+  # - presentations.md
   - projects.md
   - research.md
 
