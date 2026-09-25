@@ -4,8 +4,22 @@ permalink: /research/
 title: research
 ---
 
+## Oblivious message retrieval
 
-### Memory-query Tradeoffs for Property Testing
+This project was done at [ETH Student Summer Research Fellowship 2026](https://inf.ethz.ch/studies/summer-research-fellowship.html) at the Applied Cryptography Lab with Kenny Paterson. 
+
+This project is still WIP. More info soon!
+
+![SSRF](/assets/images/ssrf-2026-2.jpeg)
+
+<br>
+
+---
+
+<br>
+
+## Memory-query Tradeoffs for Property Testing
+Submitted to ITCS, more info soon!
 
 Project done as part of the DIMACS [REU program](https://reu.dimacs.rutgers.edu/) at Rutgers University 🇺🇸 on Summer 2024.
 
@@ -24,7 +38,7 @@ Project done as part of the DIMACS [REU program](https://reu.dimacs.rutgers.edu/
 
 <br>
 
-### Reducing Polynomial Degree in PlonK zkSNARK
+## Reducing Polynomial Degree in PlonK zkSNARK
 
 This project was part of my bachelor thesis. The thesis provides a comprehensive description of all rounds of the prover protocol, along with an introduction to the necessary primitives, such as elliptic curve cryptography and commitment schemes. A portion of the thesis explores the possibility of optimizing this protocol by reducing the degree of the polynomials used. This optimization takes place during the arithmetization phase, where we focus on improving the efficiency of padding before performing the FFT. Our work has led to slight performance improvements in the [Rust-based implementation by ZK Garage](https://github.com/ZK-Garage/plonk).
 
