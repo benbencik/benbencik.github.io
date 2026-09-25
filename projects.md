@@ -310,10 +310,10 @@ order: 3
     <span class="section-chevron">▶</span> <span class="section-label">University Projects</span>
 </h2>
 <ul class="section-summary" id="university-summary">
-    <li onclick="openFromSummary(event, 'university', 'chopinDesc')">Implementation of Chopin PCS <span class="summary-meta">— Charles University</span></li>
+    <li onclick="openFromSummary(event, 'university', 'chopinDesc')">Implementation of Chopin PCS <span class="summary-meta">— Charles University 🇨🇿</span></li>
     <li onclick="openFromSummary(event, 'university', 'fluidDynamicsDesc')">Optimization of fluid dynamics simulation <span class="summary-meta">— TU Munich 🇩🇪</span></li>
-    <li onclick="openFromSummary(event, 'university', 'mobiusDesc')">Efficient Möbius Computations on Multipermutations <span class="summary-meta">— Charles University</span></li>
-    <li onclick="openFromSummary(event, 'university', 'gnnDesc')">Classification of magnetic phases by GNNs <span class="summary-meta">— Charles University</span></li>
+    <li onclick="openFromSummary(event, 'university', 'mobiusDesc')">Efficient Möbius Computations on Multipermutations <span class="summary-meta">— Charles University 🇨🇿</span></li>
+    <li onclick="openFromSummary(event, 'university', 'gnnDesc')">Classification of magnetic phases by GNNs <span class="summary-meta">— Charles University 🇨🇿</span></li>
 </ul>
 
 <div class="projects-section" id="university-cards" style="display: none;">
